@@ -8,6 +8,8 @@ git clone -b main --depth=1  https://github.com/hanglegehang/chat2api-plus.git c
 ## 进入目录
 cd chat2api-plus
 
+chmod 755 ./deploy.sh
+
 docker compose pull
 docker compose up -d --remove-orphans
 
