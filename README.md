@@ -74,7 +74,7 @@ vi config.yaml
 |    RetryHttpCodeList           | 重试错误码，yaml格式配置，一行一个，不理解不要乱配置 | 401, 429, 502, 403, 500 |
 |    MaxRetryCount | 最大重试次数                       | 3                       |
 |    QueueRefreshAccount           | 是否开启队列加号                     | true                    |
-|    QueueAddAccountRate           | 队列加号速率，单位秒                   | 2s/个                    |
+|    QueueAddAccountRate           | 队列加号速率，单位秒                   | 2s处理一个                  |
 |    PrePrompt           | 是否添加默认Prompt                 | true                    |
 |    MaxContinueCount           | 超长对话，最大连续对话次数                | 3                       |
 |    API_SERVER           | 网关地址                         | 无                       |
@@ -86,7 +86,7 @@ vi config.yaml
 |    AUTO_DELETE_CONV           | 自动删除聊天记录，调用接口主动删除            | false                   |
 |    HistoryDisabled           | 使用隐私默认对话，无法使用文件下载            | false                   |
 |    DalleFreezeEnable           | 画图冷却，会将对话一起冷却，按需开启           | false                   |
-|    DalleFreezeTime           | 画图冷却时长，单位秒                   | 10800（三小时）              |
+|    DalleFreezeTime           | 画图冷却时长，单位秒                   | 10800（3小时）              |
 
 确保根据实际情况修改配置文件中的设置，数据库连接、请求所需的验证秘钥、网关地址等。
 
