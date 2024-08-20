@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0.35
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data/mysql/:/var/lib/mysql/
+    #      - ./docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
+    environment:
+      TZ: Asia/Shanghai # 指定时区
+      MYSQL_ROOT_PASSWORD: "qiueoq1920913" # 配置root用户密码
+      MYSQL_DATABASE: "chat2api" # 业务库名
+      MYSQL_USER: "chat2api" # 业务库用户名
+      MYSQL_PASSWORD: "qiueoq1920913" # 业务库密码
+  wm-chat2api:
+    image: ghcr.io/wm-chatgpt/wm-chat2api:latest
+    restart: always
+    ports:
+      - 8700:8700
+    environment:
+      TZ: Asia/Shanghai # 指定时区
+    volumes:
+      - ./static:/app/resource/public/static
+      - ./config.yaml:/app/config.yaml
+      - ./data/wm-chat2api/:/app/data/
+      - ./logs/:/app/logs/
+    labels:
+      - "com.centurylinklabs.watchtower.scope=hanglegehang-wm-chat2api"
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --scope hanglegehang-wm-chat2api --cleanup --interval 600
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    labels:
+      - "com.centurylinklabs.watchtower.scope=hanglegehang-wm-chat2api"
