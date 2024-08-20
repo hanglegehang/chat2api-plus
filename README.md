@@ -45,10 +45,10 @@
 
 ### 步骤 1: 克隆仓库
 
-首先，使用 Git 克隆仓库到你的本地或服务器上：
+首先，一键部署脚本：
 
 ```bash
-git clone https://github.com/hanglegehang/chat2api-plus.git
+curl -sSfL https://raw.githubusercontent.com/hanglegehang/chat2api-plus/main/quick-install.sh | bash
 ```
 
 ### 步骤 2: 进入项目目录
