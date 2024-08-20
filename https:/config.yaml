@@ -1,0 +1,84 @@
+server:
+  logPath: "./logs"                 # 日志文件存储目录路径，建议使用绝对路径。默认为空，表示关闭
+  errorLogPattern: "error-{Ymd}.log"  # 异常错误日志文件格式。默认为"error-{Ymd}.log"
+  accessLogEnabled: true              # 是否记录访问日志。默认为false
+  accessLogPattern: "access.log" # 访问日志文件格式。默认为"access-{Ymd}.log"
+  logger:
+    path: "./logs"   # 日志文件路径。默认为空，表示关闭，仅输出到终端
+    file: "info.log" # 日志文件格式。默认为"{Y-m-d}.log"
+logger:
+  path: "./logs"   # 日志文件路径。默认为空，表示关闭，仅输出到终端
+  file: "info.log" # 日志文件格式。默认为"{Y-m-d}.log"
+  level: "all"         # 日志输出级别
+  rotateSize: 104857600
+  rotateExpire: 24h          # 按照日志文件时间间隔对文件滚动切分。默认为0，表示关闭滚动切分特性
+  rotateBackupExpire: 720h             # 按照切分的文件有效期清理切分文件，当滚动切分特性开启时有效。默认为0，表示不备份，切分则删除
+  rotateCheckInterval: "1h"          # 滚动切分的时间检测间隔，一般不需要设置。默认为1小时
+
+database:
+  default: # 数据源名称,当不指定数据源时 default 为默认数据源
+    type: "mysql" # 数据库类型
+    host: "mysql" # 数据库地址
+    port: "3306" # 数据库端口
+    user: "root" # 数据库用户名
+    pass: "qiueoq1920913" # 数据库密码
+    name: "chat2api" # 数据库名称
+    charset: "utf8mb4" # 数据库编码
+    timezone: "Asia/Shanghai" # 数据库时区
+#    debug: true # 是否开启调试模式，开启后会打印SQL日志
+
+ModelConvert:
+    "gpt-35": "gpt-3.5-*,gpt-3.5-turbo"
+    "gpt-35o": "gpt-3.5o,gpt-3.5-all"
+    "gpt-4-gizmo-g-YyyyMT9XH": "gpt-4,gpt-4-*"
+    "gpt-4": "1|gpt-4-vision-preview,gpt-4-all" #优先级逻辑：如果同时存在gpt-4-*和gpt-4-gizmo-*，会产生匹配冲突，默认会匹配后者，所以如果有冲突需要手动设置优先级比如1|, 2|, 3|以此类推
+    "gpt-4o": "gpt-4o,gpt-4o-2024-05-13"
+    "gpt-4o-mini": "gpt-4o-mini,gpt-4o-2024-05-13"
+
+#程序使用授权码，请联系作者获取
+LICENCE: "授权码"
+#自动删除对话记录
+AUTO_DELETE_CONV: true
+#是否启用免登3.5
+EnableFree35 : false
+#是否启用权重
+EnableWeight: true
+#是否启用工具调用痕迹
+EnableToolText: true
+#最大自动连续对话次数
+MaxContinueCount: 3
+#重试自定义配置
+EnableRetry: true
+RetryHttpCodeList:
+    - 401
+    - 502
+    - 500
+    - 403
+    - 404
+MaxRetryCount: 3 #最多会重试三次
+# 网关地址
+API_SERVER: "你的网关地址"
+# 网关访问密码
+API_SERVER_AUTH_KEY: "你的网关访问密码"
+# sk-xxx 请求验证 api key
+API_AUTH_KEY: "sk-xxxx"
+# 图床配置(本地)
+ossSetting:
+  type: local
+  domain: "http://127.0.0.1:8700" #  部署域名或ip+端口
+
+# 图床配置(阿里云oss)
+# ossSetting:
+#   type: oss
+#   bucket: oaitest
+#   endpoint: "https://oss-us-west-1.aliyuncs.com"
+#   accessKey: ""
+#   secretKey: ""
+
+# 图床配置(千牛云koda)
+# ossSetting:
+#   type: koda
+#   bucket: oaitest
+#   domain: "加速域名"
+#   accessKey: ""
+#   secretKey: ""
