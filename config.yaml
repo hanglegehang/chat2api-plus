@@ -47,6 +47,8 @@ EnableWeight: true
 EnableToolText: true
 #最大自动连续对话次数
 MaxContinueCount: 3
+
+
 #重试自定义配置
 EnableRetry: true
 RetryHttpCodeList:
@@ -54,7 +56,6 @@ RetryHttpCodeList:
     - 502
     - 500
     - 403
-    - 404
 MaxRetryCount: 3 #最多会重试三次
 # 网关地址
 API_SERVER: "你的网关地址"
@@ -62,6 +63,8 @@ API_SERVER: "你的网关地址"
 API_SERVER_AUTH_KEY: "你的网关访问密码"
 # sk-xxx 请求验证 api key
 API_AUTH_KEY: "sk-xxxx"
+# 禁用图片oss 直接返回官网地址
+OssPicDisable: true
 # 图床配置(本地)
 ossSetting:
   type: local
