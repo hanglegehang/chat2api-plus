@@ -40,8 +40,6 @@ LICENCE: "授权码"
 AUTO_DELETE_CONV: true
 #是否启用免登3.5
 EnableFree35 : false
-#是否启用权重
-EnableWeight: true
 #是否启用工具调用痕迹
 EnableToolText: true
 #最大自动连续对话次数
