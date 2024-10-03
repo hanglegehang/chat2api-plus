@@ -4,8 +4,8 @@ services:
     image: mysql:8.0.35
     command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     restart: always
-    ports:
-      - 3306:3306
+    # ports:
+    #  - 3306:3306
     volumes:
       - ./data/mysql/:/var/lib/mysql/
     #      - ./docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
