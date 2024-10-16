@@ -36,8 +36,8 @@ ModelConvert:
     "o1-mini": "o1-mini"
     "o1-preview": "o1-preview"
 
-#程序使用授权码，请联系作者获取
-LICENCE: "授权码"
+#程序使用授权码
+LICENCE: "xiaohuasheng656"
 #自动删除对话记录
 AUTO_DELETE_CONV: true
 #是否启用免登3.5
