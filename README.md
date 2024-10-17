@@ -1,14 +1,6 @@
 # chat2api-plus
 **chat2api-plus** 用于将 Web 端的 ChatGPT 对话接口转换为标准的 OpenAI API 格式。本程序支持官网所有模型(会持续更新)，包括 GPT-3.5、GPT-4、GPT-4-all、GPTS， GPT-4o, GPT-4o-mini 和 dalle画图模型。本项目配备了易于使用的管理仪表板，包括渠道管理、可视化数据显示以及批量添加或修改账户的功能。
 
-**重要提示**：~~运行此项目需要授权。目前可联系项目组进行试用，提供免费试用网关。~~
-
-**注意**：~~本站出售api逆向自研网关，基础价格600￥/QPS，2QPS以上500￥，5QPS以上400￥，稳定高速。网关支持私有化部署，具体价格私聊；~~
-
-~~可以提供免费测试网关，支持拼车，可以自行反代，按量控制~~
-
-~~为保证服务负载和性能，杜绝超卖，到达QPS上限，停止售卖~~
-
 配套网关部署方案：https://github.com/wm-chatgpt/chatgpt-gateway
 
 ## 特性
@@ -121,9 +113,3 @@ docker compose up -d
 - 密码: 123456
 
 请在首次登陆后尽快更改默认密码以保证系统安全。
-
-
-
-## 联系方式 & 购买授权
-
-<img src="https://github.com/user-attachments/assets/fb135b91-b10f-4b11-bc04-ae5ba631aa79" width="250" height="auto" alt="联系方式及购买授权信息">
