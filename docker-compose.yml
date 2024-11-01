@@ -16,7 +16,7 @@ services:
       MYSQL_USER: "chat2api" # 业务库用户名
       MYSQL_PASSWORD: "qiueoq1920913" # 业务库密码
   wm-chat2api:
-    image: ghcr.io/wm-chatgpt/wm-chat2api:latest
+    image: ghcr.io/wm-chatgpt/wm-chat2api:new-latest
     restart: always
     ports:
       - 8700:8700
