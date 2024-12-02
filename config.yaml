@@ -43,7 +43,7 @@ AUTO_DELETE_CONV: true
 #是否启用免登3.5
 EnableFree35 : false
 #是否启用工具调用痕迹
-EnableToolText: true
+EnableToolText: false
 #最大自动连续对话次数
 MaxContinueCount: 3
 
