@@ -104,8 +104,8 @@ vi config.yaml
 模型映射规则：
 
 - key由两部分组成，用|线分割：
-第一部分：gpt-4o、gpt-4、o1-mini、o1-preview、gpt-4o-mini、o1、o1-pro、gpts，注意：gpts代表自适应所有gpts
-第二部分：free、plus、tplus、tteam、pro，注意：tplus是个人区，tteam是工作区
+  - 第一部分：gpt-4o、gpt-4、o1-mini、o1-preview、gpt-4o-mini、o1、o1-pro、gpts，注意：gpts代表自适应所有gpts
+  - 第二部分：free、plus、tplus、tteam、pro，注意：tplus是个人区，tteam是工作区
 
 - value随意填写，多个用,分割即可
 
