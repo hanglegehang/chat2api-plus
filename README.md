@@ -94,7 +94,7 @@ vi config.yaml
 |    OssPicDisable           | 是否禁用图片oss,禁用后会直接返回官方地址       | false                   |
 |    OverCountDisableTime           | 429后普号禁用时长，单位秒               | 3600（1小时）               |
 |    SpeedTestSkip           | new-api测试速度优化                | false                   |
-|    AUTO_DELETE_CONV           | 自动删除聊天记录，调用接口主动删除            | false                   |
+|    AUTO_DELETE_CONV           | 自动删除聊天记录，调用接口主动删除            | true                   |
 |    HistoryDisabled           | 使用隐私默认对话，无法使用文件下载            | false                   |
 |    DalleFreezeEnable           | 画图冷却，会将对话一起冷却，按需开启           | false                   |
 |    DalleFreezeTime           | 画图冷却时长，单位秒                   | 10800（3小时）              |
