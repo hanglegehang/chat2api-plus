@@ -101,6 +101,25 @@ vi config.yaml
 
 确保根据实际情况修改配置文件中的设置，数据库连接、请求所需的验证秘钥、网关地址等。
 
+模型映射规则：
+
+- key由两部分组成，用|线分割：
+第一部分：gpt-4o、gpt-4、o1-mini、o1-preview、gpt-4o-mini、o1、o1-pro、gpts，注意：gpts代表自适应所有gpts
+第二部分：free、plus、tplus、tteam、pro，注意：tplus是个人区，tteam是工作区
+
+- value随意填写，多个用,分割即可
+
+示例：
+```
+ModelConvert:
+  "gpt-4o-mini": "gpt-4o-mini,gpt-4o-mini-2024-07-18,gpt-3.5-*,gpt-3.5-turbo,gpt-3.5o,gpt-3.5-all"
+  "gpt-4o": "1|gpt-4-all,gpt-4o-all,gpt-4o,gpt-4o-latest,gpt-4o-2024-05-13,gpt-4o-2024-08-06"
+  "gpt-4o|free": "1|gpt-35o" #调用普号4o
+  "o1-mini|plus,tteam": "o1-mini"
+  "o1-pro": "o1-pro"
+  "o1": "o1"
+```
+
 ### 步骤 4: 启动服务
 
 使用 Docker Compose 启动服务。确保你的机器上已安装了 Docker 和 Docker Compose。
